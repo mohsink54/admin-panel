@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from "react"
-import DatePicker from "react-datepicker" // import react-datepicker
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import DatePicker from "react-datepicker" 
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -10,7 +9,6 @@ import "react-datepicker/dist/react-datepicker.css" // import the css for react-
 
 function Calendar({
   className,
-  showOutsideDays = true,
   ...props
 }: React.ComponentProps<typeof DatePicker>) {
   return (
