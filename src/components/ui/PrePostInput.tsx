@@ -1,7 +1,12 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-const PrePostInput = React.forwardRef(
+interface PrePostInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  pre?: React.ReactNode;
+  post?: React.ReactNode;
+}
+
+const PrePostInput = React.forwardRef<HTMLInputElement, PrePostInputProps>(
   ({ className, type, pre, post, ...props }, ref) => {
     return (
       <div
@@ -18,7 +23,7 @@ const PrePostInput = React.forwardRef(
         <input
           type={type}
           className={cn(
-            "flex-1 bg-transparent px-0 py-1 text-base focus-visible:outline-none placeholder:text-muted-foreground md:text-sm ",
+            "flex-1 bg-transparent px-0 py-1 text-base focus-visible:outline-none placeholder:text-muted-foreground md:text-sm",
             !pre && "pl-0",
             !post && "pr-0"
           )}
@@ -26,7 +31,7 @@ const PrePostInput = React.forwardRef(
           {...props}
         />
         {post && (
-          <span className="px-2 text-muted-foreground flex items-center ">
+          <span className="px-2 text-muted-foreground flex items-center">
             {typeof post === "string" ? <span>{post}</span> : post}
           </span>
         )}
