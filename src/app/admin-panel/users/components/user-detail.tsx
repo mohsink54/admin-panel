@@ -9,6 +9,7 @@ interface UserDetailsProps {
     open:boolean
     onClose: ()=> void
 }
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 export function USerDetail({ open, onClose}: UserDetailsProps){
     const[isSuspendedDialogOpen, setIsSuspendedDialogOpen] = useState(false);

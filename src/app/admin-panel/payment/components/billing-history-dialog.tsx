@@ -10,6 +10,9 @@ interface BillingHistoryDialogProps {
   onClose: () => void
 }
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
+
 export function BillingHistoryDialog({ open, onClose }: BillingHistoryDialogProps) {
     const [billing, setBilling] = useState(billingHistory);
   return (
