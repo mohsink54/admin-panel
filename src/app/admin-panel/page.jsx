@@ -2,7 +2,7 @@
 import React from 'react';
 import { TotalRevenue } from './components/total-revenue';
 import { DailyTraffic } from './components/dailt-trafic';
-import { GoogleMap } from './components/google-map';
+import  GoogleMapComponent  from './components/google-map';
 import { ArrowUp } from 'lucide-react';
 
 const StatItem = ({ 
@@ -78,7 +78,7 @@ const Page = () => {
           <DailyTraffic />
         </div>
         <div className="col-span-1 lg:col-span-2">
-          <GoogleMap />
+          <GoogleMapComponent />
         </div>
       </div>
     </div>
